@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrating 80 Glorious Years | Grandfather's 80th Birthday Celebration</title>
+  <meta name="description" content="Join us in celebrating 80 glorious years of love, wisdom, and laughter for our beloved Grandfather. An extraordinary milestone celebration.">
+
+  <!-- Google Fonts for Luxury Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="envelope-active">
+
+  <!-- Interactive Ambient Aurora Mesh & Cursor Glow -->
+  <div class="interactive-bg-mesh" id="interactiveBgMesh" aria-hidden="true">
+    <div class="mesh-orb mesh-orb-1" id="meshOrb1"></div>
+    <div class="mesh-orb mesh-orb-2" id="meshOrb2"></div>
+    <div class="mesh-orb mesh-orb-3" id="meshOrb3"></div>
+    <div class="mesh-orb mesh-orb-4" id="meshOrb4"></div>
+    <div class="cursor-ambient-spotlight" id="cursorSpotlight"></div>
+    <div class="cosmic-grid-overlay"></div>
+  </div>
+
+  <!-- Golden Particle Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ==================== 1. INTERACTIVE ROYAL ENVELOPE OVERLAY ==================== -->
+  <div class="envelope-overlay" id="envelopeOverlay">
+    <div class="envelope-curtain-top"></div>
+    <div class="envelope-curtain-bottom"></div>
+    
+    <div class="envelope-scene">
+      <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter" id="envelopeLetter">
+          <div class="letter-inner">
+            <span class="royal-crest-mini">👑</span>
+            <div class="letter-badge">Royal Invitation</div>
+            <h2 class="letter-title">The Grand Milestone</h2>
+            <p class="letter-sub">You are cordially invited to celebrate</p>
+            <h3 class="letter-name">80 Glorious Years</h3>
+            <p class="letter-quote">"A life woven with love, guided by wisdom, and cherished by generations."</p>
+            <div class="letter-cta-hint">Click the Golden Seal to Enter</div>
+          </div>
+        </div>
+        <div class="envelope-front-pocket"></div>
+        <div class="envelope-flap" id="envelopeFlap"></div>
+        
+        <!-- Interactive Wax Seal -->
+        <button class="wax-seal" id="waxSealBtn" aria-label="Break Seal and Open Invitation">
+          <div class="seal-outer-ring"></div>
+          <div class="seal-inner-circle">
+            <span class="seal-crown">👑</span>
+            <span class="seal-number">80</span>
+            <span class="seal-text">YEARS</span>
+          </div>
+          <div class="seal-shine"></div>
+          <div class="seal-pulse"></div>
+        </button>
+      </div>
+
+      <div class="envelope-instruction">
+        <span class="tap-icon">✨</span> Tap the Golden Wax Seal to Unveil the Celebration <span class="tap-icon">✨</span>
+      </div>
+
+      <button class="skip-btn" id="skipEnvelopeBtn">Skip to Invitation &rarr;</button>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN WEBSITE CONTENT ==================== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-crest">👑</span>
+          <span class="brand-text">The 80th Jubilee</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#story" class="nav-link">8 Decades</a>
+          <a href="life-story.html" class="nav-link story-link">Life Story</a>
+          <a href="#gallery" class="nav-link">Photo Vault</a>
+          <a href="#wishes" class="nav-link">Wishes Wall</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        
+        <div class="hero-royal-header animate-fade-in">
+          <div class="hero-sub-heraldry">
+            <span class="gold-line"></span>
+            <span class="heraldry-text">A CELEBRATION OF A LIFETIME</span>
+            <span class="gold-line"></span>
+          </div>
+          
+          <h1 class="hero-title">
+            <span class="title-top">Celebrating 80 Years of</span>
+            <span class="title-highlight shimmer-gold">Grace, Wisdom & Love</span>
+          </h1>
+
+          <p class="hero-dedication">
+            In honor of our beloved <span class="gold-accent-name">Grandfather</span>'s 80th Birthday — A living legend, the cornerstone of our family, and a guiding light to all.
+          </p>
+        </div>
+
+        <!-- 80th Milestone Emblem & Interactive Frame -->
+        <div class="milestone-spotlight animate-scale-up">
+          <div class="spotlight-frame-outer">
+            <div class="spotlight-glow"></div>
+            <div class="spotlight-frame-inner">
+              <div class="spotlight-badge-top">1946 &bull; 2026</div>
+              <div class="spotlight-center-content">
+                <div class="giant-number-wrap">
+                  <span class="giant-80">80</span>
+                  <div class="sparkle-orbit">
+                    <span class="orbit-sparkle s1">✦</span>
+                    <span class="orbit-sparkle s2">✦</span>
+                    <span class="orbit-sparkle s3">✦</span>
+                    <span class="orbit-sparkle s4">✦</span>
+                  </div>
+                </div>
+                <div class="spotlight-sub-caption">YEARS OF INSPIRING LIFE</div>
+              </div>
+              <div class="spotlight-footer-quote">
+                “Eighty years of building dreams, sharing kindness, and inspiring everyone around him.”
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-card animate-slide-up">
+          <div class="countdown-header">
+            <i data-lucide="clock" class="gold-icon"></i>
+            <span>COUNTING DOWN TO THE GRAND CELEBRATION</span>
+          </div>
+          <div class="countdown-grid" id="countdownGrid">
+            <div class="countdown-box">
+              <div class="countdown-value" id="daysVal">00</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-box">
+              <div class="countdown-value" id="hoursVal">00</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-box">
+              <div class="countdown-value" id="minsVal">00</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-divider">:</div>
+            <div class="countdown-box">
+              <div class="countdown-value" id="secsVal">00</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions animate-fade-in">
+          <a href="#gallery" class="btn btn-glass">
+            <i data-lucide="images"></i>
+            <span>Explore 80 Photos Vault</span>
+          </a>
+          <a href="life-story.html" class="btn btn-glass story-cta">
+            <i data-lucide="film"></i>
+            <span>Watch His Life Story</span>
+          </a>
+          <button class="btn btn-celebrate" id="heroConfettiBtn">
+            <i data-lucide="party-popper"></i>
+            <span>Celebrate with Confetti!</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. "8 DECADES OF BRILLIANCE" TIMELINE ==================== -->
+    <section class="story-section section-padding" id="story">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-tag">A LIFETIME OF STORIES</span>
+          <h2 class="section-title">8 Decades of Brilliance</h2>
+          <div class="heading-gold-divider"><span>❦</span></div>
+          <p class="section-subtitle">
+            A tribute to eight extraordinary decades that shaped generations and left an indelible mark on all our hearts.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-spine"></div>
+
+          <!-- Decade 1 -->
+          <div class="timeline-item left-item">
+            <div class="timeline-dot"><span>1</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 1 &bull; 1940s</div>
+              <h3 class="card-title">The Dawn of a Bright Spirit</h3>
+              <p class="card-desc">Born into a world of simple wonders and strong traditions, displaying curiosity, boundless kindness, and a warm smile from the very beginning.</p>
+              <div class="card-highlight-quote">“Every great journey begins with a spark of kindness.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 2 -->
+          <div class="timeline-item right-item">
+            <div class="timeline-dot"><span>2</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 2 &bull; 1950s</div>
+              <h3 class="card-title">Youth, Ambition & Learning</h3>
+              <p class="card-desc">Years of spirited youth, education, forging lifelong friendships, and instilling the unwavering discipline that defined his life.</p>
+              <div class="card-highlight-quote">“Rooted in integrity, driven by hard work.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 3 -->
+          <div class="timeline-item left-item">
+            <div class="timeline-dot"><span>3</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 3 &bull; 1960s</div>
+              <h3 class="card-title">Finding True Love & New Foundations</h3>
+              <p class="card-desc">The start of a beautiful partnership filled with devotion, laughter, and building the solid foundations of a cherished family.</p>
+              <div class="card-highlight-quote">“Love isn’t just felt; it is lived every single day.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 4 -->
+          <div class="timeline-item right-item">
+            <div class="timeline-dot"><span>4</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 4 &bull; 1970s</div>
+              <h3 class="card-title">The Joy of Fatherhood</h3>
+              <p class="card-desc">Guiding, teaching, and nurturing his children with endless patience, warm bedtime stories, and valuable life lessons.</p>
+              <div class="card-highlight-quote">“A father is someone you look up to no matter how tall you grow.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 5 -->
+          <div class="timeline-item left-item">
+            <div class="timeline-dot"><span>5</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 5 &bull; 1980s</div>
+              <h3 class="card-title">Career Milestones & Pillars of Strength</h3>
+              <p class="card-desc">Mastering his craft, earning respect from peers, and always being the calm anchor during life's biggest challenges.</p>
+              <div class="card-highlight-quote">“Success is measured by the peace of mind you bring home.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 6 -->
+          <div class="timeline-item right-item">
+            <div class="timeline-dot"><span>6</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 6 &bull; 1990s</div>
+              <h3 class="card-title">The Golden Title: Grandfather</h3>
+              <p class="card-desc">Welcoming grandchildren into his arms, spoiling them with treats, gentle smiles, and infinite unconditional affection.</p>
+              <div class="card-highlight-quote">“Grandparents hold our tiny hands for just a little while, but our hearts forever.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 7 -->
+          <div class="timeline-item left-item">
+            <div class="timeline-dot"><span>7</span></div>
+            <div class="timeline-card">
+              <div class="card-badge">Decade 7 &bull; 2000s-2010s</div>
+              <h3 class="card-title">Wisdom, Travel & Celebrations</h3>
+              <p class="card-desc">Exploring the world, celebrating family graduations, weddings, and seeing his legacy blossom into a large, loving family tree.</p>
+              <div class="card-highlight-quote">“The best wealth in life is the laughter of your family gathered together.”</div>
+            </div>
+          </div>
+
+          <!-- Decade 8 -->
+          <div class="timeline-item right-item">
+            <div class="timeline-dot"><span>8</span></div>
+            <div class="timeline-card golden-special-card">
+              <div class="card-badge gold-badge">Decade 8 &bull; The 80th Milestone</div>
+              <h3 class="card-title">80 Years of Pure Grace & Glory</h3>
+              <p class="card-desc">Today we celebrate 80 magnificent years of an incredible human being whose warmth lights up every room he enters.</p>
+              <div class="card-highlight-quote gold-quote">“May the road ahead continue to be blessed with health, joy, and peace!”</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. PHOTO VAULT GALLERY ==================== -->
+    <section class="gallery-section section-padding" id="gallery">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-tag">CHERISHED MEMORIES</span>
+          <h2 class="section-title">The Grand Memory Vault</h2>
+          <div class="heading-gold-divider"><span>❦</span></div>
+          <p class="section-subtitle">
+            80 Treasured snapshots capturing eight decades of happiness, celebrations, and unforgettable family bonds.
+          </p>
+        </div>
+
+        <!-- Gallery Controls -->
+        <div class="gallery-controls">
+          <div class="gallery-filters" id="galleryFilters">
+            <button class="filter-btn active" data-filter="all">All Memories (<span id="photoCount">80</span>)</button>
+            <button class="filter-btn" data-filter="highlights">🌟 Highlights</button>
+            <button class="filter-btn" data-filter="family">👨‍👩‍👧‍👦 Family Moments</button>
+            <button class="filter-btn" data-filter="celebrations">🎉 Celebrations</button>
+          </div>
+          <div class="gallery-view-mode">
+            <button class="view-mode-btn" id="startSlideshowBtn">
+              <i data-lucide="play-circle"></i>
+              <span>Play Slideshow</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="photo-grid" id="photoGrid">
+          <!-- Dynamically populated via JS -->
+          <div class="gallery-loading-placeholder">
+            <div class="spinner"></div>
+            <p>Gathering the Golden Memories...</p>
+          </div>
+        </div>
+
+        <!-- Gallery Load More Button -->
+        <div class="gallery-load-more text-center" id="galleryLoadMoreContainer" style="display: none;">
+          <button class="btn btn-outline-gold" id="loadMorePhotosBtn">
+            <i data-lucide="chevron-down"></i>
+            <span>View More Photos</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. LIGHT THE 80 CANDLES INTERACTIVE CAKE ==================== -->
+    <section class="cake-section section-padding" id="cake">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-tag">MAKE A BIRTHDAY WISH</span>
+          <h2 class="section-title">Light the 80th Birthday Candles 🎂</h2>
+          <div class="heading-gold-divider"><span>❦</span></div>
+          <p class="section-subtitle">
+            Tap the cake or use the ignition button below to light 80 golden candles and shower Grandpa with love and blessings!
+          </p>
+        </div>
+
+        <div class="interactive-cake-stage">
+          <div class="cake-status-bar">
+            <div class="candle-counter">
+              <span>Candles Lit:</span>
+              <strong id="candleCounterText">0 / 80</strong>
+            </div>
+            <div class="candle-progress-track">
+              <div class="candle-progress-bar" id="candleProgressBar" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="cake-display-area" id="cakeDisplayArea">
+            <!-- 3D Layered Virtual Cake -->
+            <div class="virtual-cake-container" id="cakeContainer">
+              <!-- Crown Topper -->
+              <div class="cake-topper">
+                <span class="topper-crown">👑</span>
+                <span class="topper-text">Happy 80th Birthday!</span>
+              </div>
+
+              <!-- Candle Tier -->
+              <div class="cake-candle-grid" id="candleGrid">
+                <!-- 80 candles generated via JS -->
+              </div>
+
+              <!-- Cake Tiers -->
+              <div class="cake-tier tier-top">
+                <div class="tier-frosting"></div>
+                <div class="tier-emboss">✦ 80 ✦</div>
+              </div>
+              <div class="cake-tier tier-middle">
+                <div class="tier-frosting"></div>
+                <div class="tier-emboss">GOLDEN JUBILEE</div>
+              </div>
+              <div class="cake-tier tier-base">
+                <div class="tier-frosting"></div>
+                <div class="tier-plate"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cake-action-buttons">
+            <button class="btn btn-gold btn-pulse" id="lightNextCandlesBtn">
+              <i data-lucide="flame"></i>
+              <span>Light 10 Candles 🔥</span>
+            </button>
+            <button class="btn btn-outline-gold" id="lightAllCandlesBtn">
+              <i data-lucide="sparkles"></i>
+              <span>Light All 80 at Once! ✨</span>
+            </button>
+            <button class="btn btn-glass" id="resetCandlesBtn">
+              <i data-lucide="rotate-ccw"></i>
+              <span>Blow Out & Make Another Wish</span>
+            </button>
+          </div>
+
+          <div class="cake-celebration-banner" id="cakeCelebrationBanner" style="display: none;">
+            <div class="banner-inner">
+              <span class="banner-emoji">🎉🎂🥂</span>
+              <h3>All 80 Candles Are Glowing!</h3>
+              <p>May his life continue to be radiant, blessed, and overflowing with happiness!</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. HOW WELL DO YOU KNOW GRANDPA TRIVIA ==================== -->
+    <section class="trivia-section section-padding" id="trivia">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-tag">FAMILY FUN & LAUGHTER</span>
+          <h2 class="section-title">How Well Do You Know Grandpa? 🧐</h2>
+          <div class="heading-gold-divider"><span>❦</span></div>
+          <p class="section-subtitle">
+            Take this quick, fun family trivia quiz and see how many questions you can answer correctly!
+          </p>
+        </div>
+
+        <div class="trivia-card-wrapper">
+          <div class="trivia-card" id="triviaCard">
+            <div class="trivia-header">
+              <span class="trivia-question-indicator" id="triviaQuestionIndicator">Question 1 of 4</span>
+              <span class="trivia-score" id="triviaScoreText">Score: 0</span>
+            </div>
+
+            <h3 class="trivia-question" id="triviaQuestionText">Loading Question...</h3>
+
+            <div class="trivia-options-grid" id="triviaOptionsGrid">
+              <!-- Options populated via JS -->
+            </div>
+
+            <div class="trivia-feedback" id="triviaFeedback" style="display: none;"></div>
+
+            <div class="trivia-footer">
+              <button class="btn btn-gold" id="triviaNextBtn" style="display: none;">
+                <span>Next Question &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. CELEBRATION DETAILS & ITINERARY ==================== -->
+    <section class="itinerary-section section-padding" id="itinerary">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-tag">EVENT SCHEDULE & LOCATION</span>
+          <h2 class="section-title">Celebration Itinerary & Venue</h2>
+          <div class="heading-gold-divider"><span>❦</span></div>
+          <p class="section-subtitle">
+            Join us for an evening of heartfelt tributes, grand feast, nostalgia, and joyous celebration.
+          </p>
+        </div>
+
+        <div class="event-details-grid">
+          
+          <!-- Itinerary Column -->
+          <div class="itinerary-column">
+            <h3 class="column-title"><i data-lucide="calendar" class="gold-icon"></i> Order of Festivities</h3>
+            
+            <div class="schedule-list">
+              
+              <div class="schedule-item">
+                <div class="schedule-time">5:30 PM</div>
+                <div class="schedule-dot"></div>
+                <div class="schedule-content">
+                  <h4 class="schedule-heading">Royal Welcome & Traditional Blessings 🪔</h4>
+                  <p class="schedule-desc">Guests arrive, warm greetings, welcome refreshments, and auspicious blessings for Grandpa.</p>
+                </div>
+              </div>
+
+              <div class="schedule-item">
+                <div class="schedule-time">6:30 PM</div>
+                <div class="schedule-dot"></div>
+                <div class="schedule-content">
+                  <h4 class="schedule-heading">Golden Tributes & Family Speeches 🥂</h4>
+                  <p class="schedule-desc">Heartwarming memories, speeches by children, grandchildren, and dear lifelong friends.</p>
+                </div>
+              </div>
+
+              <div class="schedule-item">
+                <div class="schedule-time">7:30 PM</div>
+                <div class="schedule-dot"></div>
+                <div class="schedule-content">
+                  <h4 class="schedule-heading">Grand 80th Cake Cutting Ceremony 🎂</h4>
+                  <p class="schedule-desc">Singing the birthday song, lighting the ceremonial candles, and raising a grand toast!</p>
+                </div>
+              </div>
+
+              <div class="schedule-item">
+                <div class="schedule-time">8:00 PM</div>
+                <div class="schedule-dot"></div>
+                <div class="schedule-content">
+                  <h4 class="schedule-heading">Lavish Feast & Royal Banquet 🍽️</h4>
+                  <p class="schedule-desc">A delicious multi-course dinner featuring grandfather's favorite delicacies and desserts.</p>
+                </div>
+              </div>
+
+              <div class="schedule-item">
+                <div class="schedule-time">9:00 PM</div>
+                <div class="schedule-dot"></div>
+                <div class="schedule-content">
+                  <h4 class="schedule-heading">Music, Dancing & Group Photo Session 🎶📸</h4>
+                  <p class="schedule-desc">Retro music melodies, dance floor celebration, and cherished family group portraits.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Venue & Calendar Column -->
+          <div class="venue-column">
+            <h3 class="column-title"><i data-lucide="map-pin" class="gold-icon"></i> Venue & Date</h3>
+            
+            <div class="venue-card">
+              <div class="venue-badge">Venue Information</div>
+              <h4 class="venue-name">The Grand Royal Banquet & Ballroom</h4>
+              <p class="venue-address">
+                <i data-lucide="navigation"></i>
+                <span>124 Grand Palace Avenue, Golden Jubilee Hall, Chennai / City</span>
+              </p>
+              
+              <div class="venue-meta">
+                <div class="meta-item">
+                  <i data-lucide="calendar-heart"></i>
+                  <div>
+                    <strong>Date</strong>
+                    <span>Saturday, October 24, 2026</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i data-lucide="clock"></i>
+                  <div>
+                    <strong>Time</strong>
+                    <span>5:30 PM onwards</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i data-lucide="sparkles"></i>
+                  <div>
+                    <strong>Dress Code</strong>
+                    <span>Traditional / Elegant Festive with Gold Accents</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map Placeholder / Interactive Link -->
+              <div class="venue-map-preview">
+                <div class="map-overlay-text">
+                  <i data-lucide="map-pinned"></i>
+                  <span>Click below to open directions in Google Maps</span>
+                </div>
+              </div>
+
+              <div class="venue-actions">
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-full">
+                  <i data-lucide="map"></i>
+                  <span>Get Directions on Google Maps</span>
+                </a>
+                <button class="btn btn-outline-gold btn-full" id="addToCalendarBtn">
+                  <i data-lucide="calendar-plus"></i>
+                  <span>Add to My Calendar (.ics)</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 7. WISHES WALL (GUESTBOOK) ==================== -->
+    <section class="wishes-section section-padding" id="wishes">
+      <div class="container">
+        
+        <div class="section-heading text-center">
+          <span class="section-tag">WORDS OF LOVE & BLESSINGS</span>
+          <h2 class="section-title">The Golden Wishes Wall</h2>
+          <div class="heading-gold-divider"><span>❦</span></div>
+          <p class="section-subtitle">
+            Leave your warmest birthday wishes, fondest memories, and heartfelt blessings for Grandpa to treasure forever.
+          </p>
+        </div>
+
+        <div class="wishes-layout">
+          
+          <!-- Wish Form -->
+          <div class="wish-form-card">
+            <h3 class="form-title"><i data-lucide="pen-tool" class="gold-icon"></i> Send Your Wish</h3>
+            <form id="wishForm">
+              <div class="form-group">
+                <label for="wishAuthor">Your Name</label>
+                <input type="text" id="wishAuthor" placeholder="e.g. Ramesh & Priya" required>
+              </div>
+
+              <div class="form-group">
+                <label for="wishRelationship">Relationship / Family Branch</label>
+                <input type="text" id="wishRelationship" placeholder="e.g. Grandson / Daughter / Lifelong Friend">
+              </div>
+
+              <div class="form-group">
+                <label>Choose a Stamp Badge</label>
+                <div class="stamp-selector" id="stampSelector">
+                  <label class="stamp-option selected"><input type="radio" name="stamp" value="👑" checked> <span>👑 Royal</span></label>
+                  <label class="stamp-option"><input type="radio" name="stamp" value="❤️"> <span>❤️ Love</span></label>
+                  <label class="stamp-option"><input type="radio" name="stamp" value="🥂"> <span>🥂 Cheers</span></label>
+                  <label class="stamp-option"><input type="radio" name="stamp" value="🎂"> <span>🎂 Blessings</span></label>
+                  <label class="stamp-option"><input type="radio" name="stamp" value="🌟"> <span>🌟 Star</span></label>
+                  <label class="stamp-option"><input type="radio" name="stamp" value="💐"> <span>💐 Flowers</span></label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="wishMessage">Your Message for Grandpa</label>
+                <textarea id="wishMessage" rows="4" placeholder="Dear Thatha / Grandpa, wishing you the happiest 80th birthday! Thank you for always..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-full btn-glow">
+                <i data-lucide="send"></i>
+                <span>Post Your Wish on the Wall ✨</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Wishes Display Feed -->
+          <div class="wishes-feed-container">
+            <div class="feed-header">
+              <h4><i data-lucide="message-square-heart" class="gold-icon"></i> Community Wishes (<span id="totalWishesCount">0</span>)</h4>
+              <button class="filter-wishes-btn" id="refreshWishesBtn" title="Refresh Wishes">
+                <i data-lucide="rotate-cw"></i>
+              </button>
+            </div>
+            <div class="wishes-feed" id="wishesFeed">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 8. RSVP SECTION ==================== -->
+    <section class="rsvp-section section-padding" id="rsvp">
+      <div class="container">
+        
+        <div class="rsvp-card-outer">
+          <div class="rsvp-ornament-top">❦ ❧</div>
+          
+          <div class="section-heading text-center">
+            <span class="section-tag">WE WOULD BE HONORED BY YOUR PRESENCE</span>
+            <h2 class="section-title">RSVP for the Celebration</h2>
+            <div class="heading-gold-divider"><span>❦</span></div>
+            <p class="section-subtitle">
+              Kindly confirm your attendance by <strong class="gold-text">October 10, 2026</strong> so we can arrange the best hospitality for you and your family.
+            </p>
+          </div>
+
+          <form class="rsvp-form" id="rsvpForm">
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="rsvpName">Full Name *</label>
+                <input type="text" id="rsvpName" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-half">
+                <label for="rsvpPhone">Phone Number / WhatsApp *</label>
+                <input type="tel" id="rsvpPhone" placeholder="+91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="rsvpEmail">Email Address</label>
+                <input type="email" id="rsvpEmail" placeholder="you@example.com">
+              </div>
+              <div class="form-group col-half">
+                <label for="rsvpAttending">Will you be attending? *</label>
+                <select id="rsvpAttending" required>
+                  <option value="yes" selected>🎉 Joyfully Attending with Family</option>
+                  <option value="solo">✨ Joyfully Attending (Solo)</option>
+                  <option value="no">💌 Regretfully Unable to Attend in Person</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-half">
+                <label for="rsvpGuests">Number of Guests (Including You)</label>
+                <input type="number" id="rsvpGuests" min="1" max="10" value="2">
+              </div>
+              <div class="form-group col-half">
+                <label for="rsvpDiet">Dietary Preferences</label>
+                <select id="rsvpDiet">
+                  <option value="veg">Vegetarian Feast</option>
+                  <option value="jain">Jain Vegetarian</option>
+                  <option value="nonveg">Non-Vegetarian Available</option>
+                  <option value="any">No Special Dietary Restrictions</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="rsvpNote">Special Note / Message for the Host (Optional)</label>
+              <textarea id="rsvpNote" rows="2" placeholder="Let us know if you need any assistance or have special requirements!"></textarea>
+            </div>
+
+            <div class="form-submit-wrapper text-center">
+              <button type="submit" class="btn btn-gold btn-large btn-glow" id="rsvpSubmitBtn">
+                <i data-lucide="check-circle-2"></i>
+                <span>Submit RSVP & Get Golden Pass</span>
+              </button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container text-center">
+        <div class="footer-crest">👑</div>
+        <h3 class="footer-title">Celebrating 80 Glorious Years</h3>
+        <p class="footer-dedication">With immense love, gratitude, and pride — from your Children, Grandchildren & Entire Family.</p>
+        <div class="footer-gold-line"></div>
+        <p class="footer-copy">&copy; 2026 Grandfather's 80th Jubilee. Crafted with boundless love & celebrations.</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==================== PHOTO LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightboxModal" style="display: none;">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Lightbox">
+        <i data-lucide="x"></i>
+      </button>
+      <button class="lightbox-nav-btn prev-btn" id="lightboxPrevBtn" aria-label="Previous Photo">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <div class="lightbox-image-wrapper">
+        <img id="lightboxImg" src="" alt="Grandfather's 80th Milestone Memory">
+        <div class="lightbox-caption" id="lightboxCaption">Photo Caption</div>
+      </div>
+      <button class="lightbox-nav-btn next-btn" id="lightboxNextBtn" aria-label="Next Photo">
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== RSVP SUCCESS PASS MODAL ==================== -->
+  <div class="pass-modal" id="passModal" style="display: none;">
+    <div class="pass-backdrop" id="passBackdrop"></div>
+    <div class="pass-container">
+      <div class="golden-ticket" id="goldenTicket">
+        <div class="ticket-header">
+          <span class="ticket-crest">👑</span>
+          <div class="ticket-title-wrap">
+            <span class="ticket-badge">VIP GUEST INVITATION PASS</span>
+            <h3 class="ticket-title">Grandfather's 80th Jubilee</h3>
+          </div>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-guest-name" id="ticketGuestName">Honored Guest</div>
+          <div class="ticket-status-badge" id="ticketStatusBadge">Confirmed Attending</div>
+          <div class="ticket-details-grid">
+            <div class="ticket-detail">
+              <span class="detail-label">Date:</span>
+              <span class="detail-val">Saturday, Oct 24, 2026</span>
+            </div>
+            <div class="ticket-detail">
+              <span class="detail-label">Time:</span>
+              <span class="detail-val">5:30 PM Onwards</span>
+            </div>
+            <div class="ticket-detail">
+              <span class="detail-label">Party Size:</span>
+              <span class="detail-val" id="ticketPartySize">2 Guests</span>
+            </div>
+            <div class="ticket-detail">
+              <span class="detail-label">Venue:</span>
+              <span class="detail-val">The Grand Royal Ballroom</span>
+            </div>
+          </div>
+        </div>
+        <div class="ticket-footer">
+          <span class="ticket-barcode">|||||| |||| |||||||| ||||| ||||||| 80TH-VIP</span>
+          <p class="ticket-blessing">"We eagerly look forward to celebrating this glorious milestone with you!"</p>
+        </div>
+      </div>
+      
+      <div class="pass-actions">
+        <button class="btn btn-gold" id="printTicketBtn">
+          <i data-lucide="printer"></i>
+          <span>Save / Print Invitation Pass</span>
+        </button>
+        <button class="btn btn-glass" id="closePassBtn">
+          <span>Close Window</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
